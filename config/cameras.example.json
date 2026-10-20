@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "timezone": "America/Hermosillo",
+  "data_dir": "../data",
+  "lost_timeout_s": 5.0,
+  "exit_confirm_s": 0.5,
+  "low_max": 3,
+  "medium_max": 8,
+  "model": {
+    "weights": "../artifacts/models/yolov8m-seg.pt",
+    "sha256": null,
+    "tracker": "tracking/bytetrack.yaml",
+    "device": "auto",
+    "half": true,
+    "confidence": 0.3,
+    "image_size": 640
+  },
+  "cameras": [
+    {
+      "id": "cam_1",
+      "name": "Entrada Norte",
+      "enabled": true,
+      "source": {"type": "rtsp", "env": "SIT_CAM_1_RTSP"},
+      "resolution": [1280, 720],
+      "zones": ["zones/zona_salida.json"],
+      "frame_skip": 1,
+      "buffer_size": 2,
+      "open_timeout_ms": 5000,
+      "read_timeout_ms": 5000,
+      "reconnect_delay_s": 2.0
+    },
+    {
+      "id": "cam_2",
+      "name": "Prueba Local",
+      "enabled": false,
+      "source": {"type": "video", "path": "../data/input/prueba.mp4"},
+      "resolution": [1280, 720],
+      "zones": ["zones/zona_cam2.json"]
+    }
+  ]
+}

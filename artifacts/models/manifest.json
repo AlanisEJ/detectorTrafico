@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "filename": "yolov8n.pt",
+      "task": "detect",
+      "source": "Repositorio original, commit eddbd81",
+      "sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+      "status": "legacy; no compatible con el pipeline de máscaras"
+    },
+    {
+      "filename": "yolov8s.pt",
+      "task": "detect",
+      "source": "Repositorio original, commit eddbd81",
+      "sha256": "1f47a78bf100391c2a140b7ac73a1caae18c32779be7d310658112f7ac9aa78a",
+      "status": "legacy; no compatible con el pipeline de máscaras"
+    },
+    {
+      "filename": "yolov8m-seg.pt",
+      "task": "segment",
+      "source": "Modelo solicitado por pruebaVideo.py en el commit original",
+      "sha256": null,
+      "status": "no incluido; aportar una copia local verificada antes de ejecutar inferencia"
+    }
+  ]
+}
